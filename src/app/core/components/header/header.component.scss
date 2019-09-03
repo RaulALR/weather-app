@@ -1,0 +1,40 @@
+.header-container {
+    .header-title {
+        display: flex;
+        flex-flow: column;
+        .city-name {
+            text-align: center;
+            flex-basis: 100%;
+        }
+        .date-title {
+            text-align: center;
+            flex-basis: 100%;
+        }
+    }
+    .header-body {
+        display: flex;
+        .header-temperature {
+            justify-content: flex-end;
+            display: flex;
+            flex: 1;
+            flex-basis: 33%;
+            font-size: 7em;
+        }
+        .header-weather {
+            justify-content: center;
+            display: flex;
+            flex: 2;
+            flex-basis: 33%;
+            .weather-img {
+                height: 100%;
+                width: 33%;
+            }
+        }
+        .header-data {
+            justify-content: flex-start;
+            display: flex;
+            flex: 3;
+            flex-basis: 33%;
+        }
+    }
+}

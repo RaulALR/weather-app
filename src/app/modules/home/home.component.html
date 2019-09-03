@@ -1,0 +1,8 @@
+<div id="base-container">
+    <div class="spinner-container" *ngIf="showSpinner">
+        <app-spinner></app-spinner>
+    </div>
+    <mat-card class="weather-container">
+        <app-header [weatherData]="weatherData"></app-header>
+    </mat-card>
+</div>

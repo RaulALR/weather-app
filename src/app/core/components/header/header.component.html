@@ -1,0 +1,36 @@
+<div class="header-container">
+    <div class="header-title">
+        <div class="city-name">
+            {{weatherData && weatherData.name ? weatherData.name : '--'}}
+        </div>
+        <div class="date-title">
+            {{getDate() | date: 'dd/MM/yyyy hh:mm'}}
+        </div>
+    </div>
+    <div class="header-body">
+        <div class="header-temperature">
+            {{weatherData && weatherData.main && weatherData.main.temp ? getTempSymbol(weatherData.main.temp) : ''}}{{weatherData &&
+            weatherData.main && weatherData.main.temp ? (weatherData.main.temp | number : '1.0') : '--'}}
+        </div>
+        <div class="header-weather">
+            <img class="weather-img" src="{{weatherData && weatherData.weather && weatherData.weather[0].icon ? getImage(weatherData.weather[0].icon)
+                : ''}}" />
+        </div>
+        <div class="header-data">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-icon svgIcon="thermometer"></mat-icon>
+                    {{weatherData && weatherData.main ? weatherData.main.humidity : '--'}} mm Hg
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-icon svgIcon="moon-new"></mat-icon>
+                    {{weatherData && weatherData.main ? weatherData.main.pressure : '--'}}% humidity
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-icon svgIcon="weather-windy"></mat-icon>
+                    {{weatherData && weatherData.main ? weatherData.wind.speed : '--'}} m/s MW
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+</div>

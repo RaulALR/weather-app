@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#base-container {
+    .spinner-container {
+        position: absolute;
+        z-index: 1;
+        width: 97%;
+        height: 100%;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mat-spinner {}
+    }
+    mat-card.weather-container {
+        width: 97%;
+        height: 100%;
+        display: block;
+        margin: .5em .5em .5em .5em;
+    }
+}
