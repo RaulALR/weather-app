@@ -6,30 +6,28 @@ import { withLatestFrom } from 'rxjs/operators';
 import { WeatherService } from '../../core/service/weather.service';
 import { IAppState } from '../app.state';
 import { IWeatherHttp } from '../../models/IWeatherHttp';
-import { EWeatherActions, GetWeather, GetWeatherError, GetWeatherSuccess } from './weather.actions';
 import { Action } from '@ngrx/store';
 import { Actions } from '@ngrx/effects';
 import { map } from 'rxjs/internal/operators/map';
 import { switchMap } from 'rxjs/internal/operators/switchMap';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
+import { EDailyWeatherActions, GetDailyWeather, GetDailyWeatherSuccess, GetDailyWeatherError } from './daily-weather.actions';
 
 @Injectable()
-export class WeatherEffects {
-
+export class DailyWeatherEffects {
     @Effect()
-    protected getWeather$ = this.actions$.pipe(
-        ofType<GetWeather>(EWeatherActions.GetWeather),
-        switchMap(
-            (action) => {
-                return this.weatherService.getWeather(action.payload).pipe(
-                    map((res) => new GetWeatherSuccess(res),
-                        (error) => new GetWeatherError(error))
-                );
-            }
-        ),
-        map(res => res)
-    );
+    protected getDailyWeather$ = this.actions$.pipe(
+        ofType<GetDailyWeather>(EDailyWeatherActions.GetDailyWeather),
+        map(res => res),
+        switchMap((action) => {
+            return this.weatherService.getDailyWeather(action.payload).pipe(
+                map((res) => {
+                    return new GetDailyWeatherSuccess(res);
+                },
+                    (error) => new GetDailyWeatherError(error))
+            );
+        }));
 
     constructor(
         private store: Store<IAppState>,

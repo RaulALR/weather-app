@@ -1,19 +1,20 @@
 <div class="header-container">
     <div class="header-title">
-        <div class="city-name">
+        <h3 class="city-name">
             {{weatherData && weatherData.name ? weatherData.name : '--'}}
-        </div>
+        </h3>
         <div class="date-title">
-            {{getDate() | date: 'dd/MM/yyyy hh:mm'}}
+            {{getDate() | date: 'dd/MM/yyyy, hh:mm'}}
         </div>
     </div>
     <div class="header-body">
         <div class="header-temperature">
-            {{weatherData && weatherData.main && weatherData.main.temp ? getTempSymbol(weatherData.main.temp) : ''}}{{weatherData &&
-            weatherData.main && weatherData.main.temp ? (weatherData.main.temp | number : '1.0') : '--'}}
+            <span>{{weatherData && weatherData.main && weatherData.main.temp ? utils.getTempSymbol(weatherData.main.temp) : ''}}{{weatherData
+                && weatherData.main && weatherData.main.temp ? (weatherData.main.temp | number : '1.0') : '--'}}
+            </span>
         </div>
         <div class="header-weather">
-            <img class="weather-img" src="{{weatherData && weatherData.weather && weatherData.weather[0].icon ? getImage(weatherData.weather[0].icon)
+            <img class="weather-img" src="{{weatherData && weatherData.weather && weatherData.weather[0].icon ? utils.getImage(weatherData.weather[0].icon)
                 : ''}}" />
         </div>
         <div class="header-data">

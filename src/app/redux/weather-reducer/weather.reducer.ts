@@ -4,6 +4,15 @@ import { IWeatherHttp } from '../../models/IWeatherHttp';
 
 export const weatherReducers = (state = initialWeatherState, action: WeatherActions) => {
     switch (action.type) {
+        case EWeatherActions.GetWeather: {
+            return {
+                ...state,
+                q: action.payload.q,
+                cnt: action.payload.cnt,
+                units: action.payload.units,
+                APPID: action.payload.APPID
+            };
+        }
         case EWeatherActions.GetWeatherSuccess: {
             return {
                 ...state,

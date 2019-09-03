@@ -7,7 +7,12 @@ export const environment = {
   apiKey: '626e6ffb8d69b69c4c2fc19a2088836e',
   apiUrl: {
     weather: 'http://api.openweathermap.org/data/2.5/weather',
+    daily: 'http://api.openweathermap.org/data/2.5/forecast',
     icon: 'http://openweathermap.org/img/wn/'
+  },
+  options: {
+    units: 'metric',
+    cnt: '7'
   }
 };
 

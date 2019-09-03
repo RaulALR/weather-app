@@ -1,0 +1,13 @@
+<div class="weather-day-container">
+    <div class="day-container">
+        {{weatherData ? utils.getDateDay(weatherData.dt_txt) : '--'}} at {{weatherData ? utils.getDateHour(weatherData.dt_txt) : '--'}}
+    </div>
+    <div class="weather-container">
+        <img src="{{weatherData && weatherData.weather && weatherData.weather && weatherData.weather[0]
+            && weatherData.weather[0].icon ? utils.getImage(weatherData.weather[0].icon) : ''}}" />
+    </div>
+    <div class="temperature-container">
+        {{weatherData && weatherData.main && weatherData.main.temp ? utils.getTempSymbol(weatherData.main.temp) : ''}}{{weatherData
+        && weatherData.main && weatherData.main.temp ? weatherData.main.temp : '--'}}
+    </div>
+</div>

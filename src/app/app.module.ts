@@ -1,3 +1,4 @@
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,7 @@ import { WeatherEffects } from './redux/weather-reducer/weather.effects';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { WeatherInterceptor } from './core/interceptors/weather.interceptor';
 import { WeatherService } from './core/service/weather.service';
+import { DailyWeatherEffects } from './redux/daily-weather-reducer/daily-weather.effects';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,11 @@ import { WeatherService } from './core/service/weather.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HomeModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([WeatherEffects]),
+    EffectsModule.forRoot([WeatherEffects, DailyWeatherEffects]),
     StoreDevtoolsModule.instrument(),
     HttpClientModule
   ],

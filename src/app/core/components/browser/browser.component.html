@@ -1,0 +1,8 @@
+<div class="form-container">
+    <form [formGroup]="formGroup" class="country-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Country" formControlName="country" required>
+        </mat-form-field>
+        <button class="country-button" mat-raised-button color="primary" (click)="selectClicked(formGroup)" [disabled]="formGroup.invalid">Select</button>
+    </form>
+</div>

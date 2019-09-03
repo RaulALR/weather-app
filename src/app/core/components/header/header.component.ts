@@ -24,21 +24,6 @@ export class HeaderComponent implements OnInit {
         return new Date();
     }
 
-    public getTempSymbol(num) {
-        switch (Math.sign(num)) {
-            case 1:
-                return '+';
-            case -1:
-                return '-';
-                break;
-            default:
-                return '';
-        }
-    }
-    public getImage(img) {
-        return `../../../assets/icons/${img}.png`;
-    }
-
     ngOnInit() {
         this.utils.getIcons(this.iconsArray);
     }

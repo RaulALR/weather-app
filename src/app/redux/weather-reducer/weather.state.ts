@@ -1,4 +1,5 @@
 import { IWeatherHttp } from '../../models/IWeatherHttp';
+import { IWeatherDailyHttp } from '../../models/IWeatherDailyHttp';
 
 export const initialWeatherState: IWeatherHttp = {
     coord: null,

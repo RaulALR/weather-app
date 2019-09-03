@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+$background: #3B3B3B;
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import './styles/layout.scss';

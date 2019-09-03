@@ -3,6 +3,16 @@
         <app-spinner></app-spinner>
     </div>
     <mat-card class="weather-container">
-        <app-header [weatherData]="weatherData"></app-header>
+        <div class="header-container">
+            <app-header *ngIf="weatherData" [weatherData]="weatherData"></app-header>
+        </div>
+        <div class="daily-container">
+            <ng-container *ngFor="let item of dailyWeatherData">
+                <app-weather-day [weatherData]="item" class="weather-day"></app-weather-day>
+            </ng-container>
+        </div>
+        <div class="browser-container">
+            <app-browser (submitCountry)="getData($event)"></app-browser>
+        </div>
     </mat-card>
 </div>
