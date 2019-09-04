@@ -14,18 +14,15 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  // styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // private spinnerStatus$ = this.store.pipe(select(selectSpinnerList));
   public showSpinner = false;
   public weatherData;
   public dailyWeatherData;
 
-  constructor(private store: Store<IAppState>) {
+  constructor(private store: Store<IAppState>) { }
 
-  }
-
+  // It get the params and launch the call in effects
   getData(event) {
     const data: IWeatherParams = {
       q: event,
@@ -39,19 +36,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    // Get the spinner status
     this.store.pipe(select(selectSpinnerList)).subscribe((state) => {
       this.showSpinner = state.status;
     });
+    // Get the weather header data, weatherData will be the input data of the header component
     this.store.pipe(select(selectWeatherList)).subscribe((state) => {
       if (state.base) {
         this.weatherData = state;
       }
     });
+    // Get the daily weather data, dailyWeatherData will be the input data of the daily component
     this.store.pipe(select(selectDailyWeatherList)).subscribe((state) => {
       this.dailyWeatherData = state.list;
     });
-    // this.store.dispatch(new GetWeather());
-    // this.store.dispatch(new GetDailyWeather());
   }
 
 }

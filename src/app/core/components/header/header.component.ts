@@ -25,14 +25,9 @@ export class HeaderComponent implements OnInit {
     @Input()
     public weatherData: IWeatherHttp;
 
+    // This component has the header data
     constructor(
         public utils: Utils) { }
 
-
-    public getDate() {
-        return new Date();
-    }
-
-    ngOnInit() {
-    }
+    ngOnInit() {}
 }

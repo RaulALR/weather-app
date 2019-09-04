@@ -22,11 +22,8 @@ export class WeatherDayComponent implements OnInit {
   @Input()
   public weatherData;
 
-  constructor(public utils: Utils) {
+  // This component is reused in the home ngFor and contains the weather of 7 times
+  constructor(public utils: Utils) { }
 
-  }
-
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 }

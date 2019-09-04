@@ -13,6 +13,7 @@ export class Utils {
         private matIconRegistry: MatIconRegistry
     ) { }
 
+    // Register external icons into app
     public getIcons(iconsArray: Array<string>) {
         iconsArray.forEach((item) => {
             const name = item.split('.');
@@ -23,20 +24,19 @@ export class Utils {
         });
     }
 
-    public getImage(img) {
-        return `../assets/img/${img}.png`;
-    }
-
+    // Get day of the param
     public getDateDay(dataTxt: string) {
         const date = new Date(dataTxt);
         return this.days[date.getDay()];
     }
 
+    // Get hour of the param
     public getDateHour(dataTxt: string) {
         const date = new Date(dataTxt);
         return date.getHours();
     }
 
+    // Get positive or negative symbol
     public getTempSymbol(num) {
         switch (Math.sign(num)) {
             case 1:
@@ -47,5 +47,10 @@ export class Utils {
             default:
                 return '';
         }
+    }
+
+    // Get actual date
+    public getDate() {
+        return new Date();
     }
 }

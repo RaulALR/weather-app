@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class SpinnerComponent implements OnInit {
 
-  constructor() {
+  // This component is a loading spinner
+  constructor() { }
 
-  }
-
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 }

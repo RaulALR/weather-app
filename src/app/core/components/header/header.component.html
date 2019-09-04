@@ -4,7 +4,7 @@
             {{weatherData && weatherData.name ? weatherData.name : '--'}}
         </h3>
         <div class="date-title">
-            {{getDate() | date: 'dd/MM/yyyy, hh:mm'}}
+            {{utils.getDate() | date: 'dd/MM/yyyy, hh:mm'}}
         </div>
     </div>
     <div class="header-body">

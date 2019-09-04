@@ -7,7 +7,6 @@ import { Utils } from './shared/utils';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'weather-app';
 
   public iconsArray: Array<string> = ['moon-new', 'thermometer', 'weather-windy', '01d', '02d',
     '03d', '04d', '09d', '10d', '11d', '13d', '50d', '01n', '02n', '03n',

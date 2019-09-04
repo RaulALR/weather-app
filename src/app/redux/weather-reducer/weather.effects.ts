@@ -37,7 +37,3 @@ export class WeatherEffects {
         private actions$: Actions,
     ) { }
 }
-// switchMap(() => this.weatherService.getWeather(),
-        //     switchMap((weatherHttp: IWeatherHttp) => of(new GetWeatherSuccess(weatherHttp)))
-
-        // ).catchError((error) => new GetWeatherError(error));
