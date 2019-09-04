@@ -11,6 +11,7 @@ import { Utils } from '../../shared/utils';
 import { WeatherDayComponent } from '../../core/components/weather-day/weather-day.component';
 import { BrowserComponent } from '../../core/components/browser/browser.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         HomeRoutingModule,
         ReactiveFormsModule,
         MatProgressSpinnerModule,

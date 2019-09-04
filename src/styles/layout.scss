@@ -1,5 +1,5 @@
 body {
-    margin: 20% 0 25% 0;
+    margin: 15% 0 25% 0;
     width: 100%;
     max-height: 20em;
     background-color: $background;
@@ -28,7 +28,7 @@ body {
         // background: linear-gradient(to right, rgba(76, 76, 76, 1) 0%, rgba(89, 89, 89, 1) 12%, rgba(102, 102, 102, 1) 25%, rgba(71, 71, 71, 1) 39%, rgba(44, 44, 44, 1) 92%, rgba(28, 28, 28, 1) 99%, rgba(19, 19, 19, 1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1);
         width: 97%;
-        height: 30em;
+        height: 40em;
         display: block;
         margin: .5em .5em .5em .5em;
         .daily-container {
@@ -39,6 +39,23 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 0.2em;
+            border: 1px solid rgb(0, 0, 0, 0.2);
+            background-color: rgba(226, 226, 226, 0.85);
+            background: rgba(226, 226, 226, 0.85);
+            background: -moz-radial-gradient(center, ellipse cover, rgba(226, 226, 226, 0.85) 0%, rgba(226, 226, 226, 0.87) 10%, rgba(219, 219, 219, 0.93) 51%, rgba(209, 209, 209, 0.97) 80%, rgba(252, 252, 252, 1) 99%, rgba(254, 254, 254, 1) 100%);
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(226, 226, 226, 0.85)), color-stop(10%, rgba(226, 226, 226, 0.87)), color-stop(51%, rgba(219, 219, 219, 0.93)), color-stop(80%, rgba(209, 209, 209, 0.97)), color-stop(99%, rgba(252, 252, 252, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(226, 226, 226, 0.85) 0%, rgba(226, 226, 226, 0.87) 10%, rgba(219, 219, 219, 0.93) 51%, rgba(209, 209, 209, 0.97) 80%, rgba(252, 252, 252, 1) 99%, rgba(254, 254, 254, 1) 100%);
+            background: -o-radial-gradient(center, ellipse cover, rgba(226, 226, 226, 0.85) 0%, rgba(226, 226, 226, 0.87) 10%, rgba(219, 219, 219, 0.93) 51%, rgba(209, 209, 209, 0.97) 80%, rgba(252, 252, 252, 1) 99%, rgba(254, 254, 254, 1) 100%);
+            background: -ms-radial-gradient(center, ellipse cover, rgba(226, 226, 226, 0.85) 0%, rgba(226, 226, 226, 0.87) 10%, rgba(219, 219, 219, 0.93) 51%, rgba(209, 209, 209, 0.97) 80%, rgba(252, 252, 252, 1) 99%, rgba(254, 254, 254, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
+            min-height: 7em;
+            min-width: 7em;
+            mat-icon {
+                height: 100%;
+                width: 100%;
+                display: table-cell;
+            }
         }
         .header-container {
             height: 40%;

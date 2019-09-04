@@ -1,4 +1,4 @@
-<div class="header-container">
+<div class="header-container" [@startAnimation]>
     <div class="header-title">
         <h3 class="city-name">
             {{weatherData && weatherData.name ? weatherData.name : '--'}}
@@ -10,12 +10,12 @@
     <div class="header-body">
         <div class="header-temperature">
             <span>{{weatherData && weatherData.main && weatherData.main.temp ? utils.getTempSymbol(weatherData.main.temp) : ''}}{{weatherData
-                && weatherData.main && weatherData.main.temp ? (weatherData.main.temp | number : '1.0') : '--'}}
+                && weatherData.main && weatherData.main.temp ? (weatherData.main.temp | number : '1.0-0') : '--'}}
             </span>
         </div>
         <div class="header-weather">
-            <img class="weather-img" src="{{weatherData && weatherData.weather && weatherData.weather[0].icon ? utils.getImage(weatherData.weather[0].icon)
-                : ''}}" />
+            <mat-icon svgIcon="{{weatherData && weatherData.weather && weatherData.weather[0].icon ? weatherData.weather[0].icon
+                    : ''}}"></mat-icon>
         </div>
         <div class="header-data">
             <mat-list role="list">

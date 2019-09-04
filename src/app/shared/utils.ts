@@ -12,14 +12,13 @@ export class Utils {
         private domSanitizer: DomSanitizer,
         private matIconRegistry: MatIconRegistry
     ) { }
-    // var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     public getIcons(iconsArray: Array<string>) {
         iconsArray.forEach((item) => {
             const name = item.split('.');
             this.matIconRegistry.addSvgIcon(
                 name[0],
-                this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/icons/${item}`)
+                this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/icons/${item}.svg`)
             );
         });
     }

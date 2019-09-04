@@ -2,6 +2,7 @@
     .header-title {
         display: flex;
         flex-flow: column;
+        margin-bottom: 1em;
         .city-name {
             text-align: center;
             flex-basis: 100%;
@@ -20,15 +21,16 @@
             flex: 1;
             flex-basis: 33%;
             font-size: 7em;
+            padding-block-start: .15em;
         }
         .header-weather {
             justify-content: center;
             display: flex;
             flex: 2;
             flex-basis: 33%;
-            .weather-img {
-                height: 100%;
-                width: 33%;
+            mat-icon {
+                width: 9.5em;
+                height: 9.5em;
             }
         }
         .header-data {
@@ -36,6 +38,9 @@
             display: flex;
             flex: 3;
             flex-basis: 33%;
+            mat-icon {
+                margin-right: 0.3em;
+            }
         }
     }
 }

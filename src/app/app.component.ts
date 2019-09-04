@@ -9,9 +9,9 @@ import { Utils } from './shared/utils';
 export class AppComponent implements OnInit {
   title = 'weather-app';
 
-  public iconsArray: Array<string> = ['moon-new.svg', 'thermometer.svg', 'weather-windy.svg', '01d.png', '02d.png',
-    '03d.png', '04d.png', '09d.png', '10d.png', '11d.png', '13d.png', '50d.png', '01n.png', '02n.png', '03n.png',
-    '04n.png', '09n.png', '10n.png', '11n.png', '13n.png', '50n.png'];
+  public iconsArray: Array<string> = ['moon-new', 'thermometer', 'weather-windy', '01d', '02d',
+    '03d', '04d', '09d', '10d', '11d', '13d', '50d', '01n', '02n', '03n',
+    '04n', '09n', '10n', '11n', '13n', '50n'];
 
   constructor(
     public utils: Utils
