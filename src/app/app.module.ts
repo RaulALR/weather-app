@@ -11,7 +11,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { WeatherEffects } from './redux/weather-reducer/weather.effects';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { WeatherInterceptor } from './core/interceptors/weather.interceptor';
 import { WeatherService } from './core/service/weather.service';
 import { DailyWeatherEffects } from './redux/daily-weather-reducer/daily-weather.effects';
 
@@ -30,7 +29,6 @@ import { DailyWeatherEffects } from './redux/daily-weather-reducer/daily-weather
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: WeatherInterceptor, multi: true },
     WeatherService
   ],
   bootstrap: [AppComponent]
